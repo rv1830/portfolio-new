@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { ShieldCheck, Cpu, Wifi, Activity, Terminal as AlertIcon, X } from "lucide-react";
 
+import CONTACT_DATA from "@/data/contact.json";
+
 export default function Header() {
   // Stats states
   const [cpuLoad, setCpuLoad] = useState(12.4);
@@ -96,12 +98,13 @@ export default function Header() {
 
         {/* Center Contact Connections */}
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-mono">
-          <a href="mailto:raviraj.bvcoe@gmail.com" className="text-cyber-green/80 hover:text-white transition-colors">[EMAIL]</a>
+          <a href={`mailto:${CONTACT_DATA.email}`} className="text-cyber-green/80 hover:text-white transition-colors">[EMAIL]</a>
           <span className="text-cyber-green/30">|</span>
-          <a href="https://www.linkedin.com/in/ravi-raj-596135216/" target="_blank" rel="noreferrer" className="text-cyber-green/80 hover:text-white transition-colors">[LINKEDIN]</a>
+          <a href={CONTACT_DATA.linkedin} target="_blank" rel="noreferrer" className="text-cyber-green/80 hover:text-white transition-colors">[LINKEDIN]</a>
           <span className="text-cyber-green/30">|</span>
-          <a href="tel:+919693877411" className="text-cyber-green/80 hover:text-white transition-colors">[+91 9693877411]</a>
+          <a href={`tel:${CONTACT_DATA.phone.replace(/\s+/g, '')}`} className="text-cyber-green/80 hover:text-white transition-colors">[{CONTACT_DATA.phone}]</a>
         </div>
+
 
         {/* HUD Realtime Stats (Dynamic Updates) */}
         <div className="flex items-center space-x-6 text-[10px] text-cyber-green/60">

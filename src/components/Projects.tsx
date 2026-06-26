@@ -4,6 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, ShieldCheck, Database, Cpu, Radio, Award } from "lucide-react";
 
+import PROJECTS_DATA from "@/data/projects.json";
+
 interface MainProject {
   title: string;
   tagline: string;
@@ -16,66 +18,7 @@ interface MainProject {
   link: string;
 }
 
-const MAIN_PROJECTS: MainProject[] = [
-  {
-    title: "ASTROSERVICE (AI VOICE BACKEND)",
-    tagline: "Highly Scalable Voice AI Astrology Orchestrator (100K+ DAU capacity)",
-    role: "Lead Backend & AI Systems Engineer",
-    metrics: [
-      { label: "AI PIPELINES", value: "STT / TTS / Regex" },
-      { label: "DAU CAPACITY", value: "100K+ Verified" },
-      { label: "ASTRO ENGINE", value: "Prokerala API" }
-    ],
-    bulletPoints: [
-      "Architected the entire backend and microservices orchestration from scratch, supporting massive daily active user spikes.",
-      "Engineered speech-to-text (STT) and text-to-speech (TTS) voice streams allowing users to speak directly to the AI astrologer.",
-      "Implemented intelligent astrological intent-routing using custom regex algorithms and Prokerala API query parsing to deliver real-time Kundali details.",
-      "Designed a highly resilient microservice structure capable of scaling automatically with zero latency penalties."
-    ],
-    stack: ["FastAPI", "Python", "Prokerala API", "STT/TTS API", "Docker", "Nginx", "Regex Routing", "WebSockets"],
-    integrity: "CRITICAL SYSTEM // VERIFIED",
-    color: "green",
-    link: "https://github.com/rv1830" // Backend only, links to GitHub
-  },
-  {
-    title: "OCTOMATE AI (SALES OS)",
-    tagline: "High-Throughput SaaS Sales OS Automation Platform",
-    role: "Founder & Lead Architect",
-    metrics: [
-      { label: "API LATENCY", value: "<50ms" },
-      { label: "DATA INGESTION", value: "100K+ records" },
-      { label: "INTEGRATION", value: "HubSpot / Google" }
-    ],
-    bulletPoints: [
-      "Built and scaled a complete full-stack Sales OS SaaS platform from 0 to production, managing full architecture.",
-      "Engineered stream-based reactive data pipelines, optimizing PostgreSQL database queries and indexes via Prisma for 40% faster retrieval.",
-      "Created unified OAuth workflows integrating HubSpot & Google APIs, eliminating manual workflows for sales operations."
-    ],
-    stack: ["Next.js", "Express.js", "PostgreSQL", "Supabase", "Prisma ORM", "Redis", "Docker", "Nginx", "WebSockets"],
-    integrity: "SECURE // SAAS ACTIVE",
-    color: "green",
-    link: "https://octomateai.online/"
-  },
-  {
-    title: "LINKUP CAPITAL (FINANCIAL LEDGER)",
-    tagline: "High-Security Decoupled Investment Ledger & Chat Engine",
-    role: "Core Backend & Security Engineer",
-    metrics: [
-      { label: "ENCRYPTION", value: "RSA-4096 / AES-256" },
-      { label: "AUDIT MECHANISM", value: "SHA-256 IPFS" },
-      { label: "RTC ENGINE", value: "Socket.io / Redis" }
-    ],
-    bulletPoints: [
-      "Architected secure financial APIs implementing end-to-end RSA-4096 key exchanges and AES-256-GCM encrypted payloads.",
-      "Engineered decentralized ledger trails, anchoring transactional hashes on Pinata IPFS to guarantee 100% tamper-proof records.",
-      "Engineered dual-database system: PostgreSQL for relational ledger schemas, and MongoDB for low-latency Real-Time Chat logs."
-    ],
-    stack: ["Node.js", "Express.js", "TypeScript", "Prisma ORM", "PostgreSQL", "MongoDB", "Redis", "IPFS", "Socket.io"],
-    integrity: "DECENTRALIZED // ENCRYPTED",
-    color: "blue",
-    link: "https://www.linkup.capital/"
-  }
-];
+const MAIN_PROJECTS: MainProject[] = PROJECTS_DATA;
 
 export default function Projects() {
   return (

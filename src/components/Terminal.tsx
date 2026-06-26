@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import confetti from "canvas-confetti";
+import CONTACT_DATA from "@/data/contact.json";
+
 
 interface CommandLog {
   command: string;
@@ -202,12 +204,12 @@ export default function Terminal() {
       case "mail":
         response = (
           <div className="space-y-1 mt-1 text-xs">
-            <p><span className="text-cyber-green font-semibold">EMAIL:</span> <a href="mailto:raviraj.bvcoe@gmail.com" className="underline hover:text-white transition-colors">raviraj.bvcoe@gmail.com</a></p>
-            <p><span className="text-cyber-green font-semibold">PHONE:</span> <a href="tel:+919693877411" className="underline hover:text-white transition-colors">+91 9693877411</a></p>
-            <p><span className="text-cyber-green font-semibold">GITHUB:</span> <a href="https://github.com/rv1830" target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors">github.com/rv1830</a></p>
-            <p><span className="text-cyber-green font-semibold">LINKEDIN:</span> <a href="https://www.linkedin.com/in/ravi-raj-596135216/" target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors">linkedin.com/in/ravi-raj-596135216/</a></p>
-            <p><span className="text-cyber-green font-semibold">X (TWITTER):</span> <a href="https://x.com/RaviRaj_sde" target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors">x.com/RaviRaj_sde</a></p>
-            <p><span className="text-cyber-green font-semibold">LOCATION:</span> New Delhi, INDIA</p>
+            <p><span className="text-cyber-green font-semibold">EMAIL:</span> <a href={`mailto:${CONTACT_DATA.email}`} className="underline hover:text-white transition-colors">{CONTACT_DATA.email}</a></p>
+            <p><span className="text-cyber-green font-semibold">PHONE:</span> <a href={`tel:${CONTACT_DATA.phone.replace(/\s+/g, '')}`} className="underline hover:text-white transition-colors">{CONTACT_DATA.phone}</a></p>
+            <p><span className="text-cyber-green font-semibold">GITHUB:</span> <a href={CONTACT_DATA.github} target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors">{CONTACT_DATA.github.replace("https://", "")}</a></p>
+            <p><span className="text-cyber-green font-semibold">LINKEDIN:</span> <a href={CONTACT_DATA.linkedin} target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors">{CONTACT_DATA.linkedin.replace("https://www.", "")}</a></p>
+            <p><span className="text-cyber-green font-semibold">X (TWITTER):</span> <a href={CONTACT_DATA.twitter} target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors">{CONTACT_DATA.twitter.replace("https://", "")}</a></p>
+            <p><span className="text-cyber-green font-semibold">LOCATION:</span> {CONTACT_DATA.location}</p>
           </div>
         );
         break;
@@ -218,8 +220,8 @@ export default function Terminal() {
             <p className="font-bold text-center text-sm border-b border-cyber-green/30 pb-1">RAVI RAJ - FULL-STACK SOFTWARE ENGINEER</p>
             <p>=========================================================</p>
             <p><span className="font-bold">[PROFILE]</span> Full-Stack Developer with a track record of building 10+ production web applications. Owner of absolute systems pipelines: testing, code quality, DevOps setups, and containerized deployments.</p>
-            <p><span className="font-bold">[CONTACT]</span> Email: raviraj.bvcoe@gmail.com | Phone: +919693877411</p>
-            <p><span className="font-bold">[NETWORKS]</span> GitHub: https://github.com/rv1830 | LinkedIn: https://www.linkedin.com/in/ravi-raj-596135216/</p>
+            <p><span className="font-bold">[CONTACT]</span> Email: {CONTACT_DATA.email} | Phone: {CONTACT_DATA.phone}</p>
+            <p><span className="font-bold">[NETWORKS]</span> GitHub: {CONTACT_DATA.github} | LinkedIn: {CONTACT_DATA.linkedin}</p>
             <p><span className="font-bold">[LANGUAGES]</span> Java, Python, JavaScript, TypeScript, Go, Dart, SQL, HTML, CSS</p>
             <p><span className="font-bold">[FRAMEWORKS]</span> Next.js, React.js, Express.js, FastAPI, NestJS, Redux, Tailwind CSS, Bootstrap, Material UI, Shadcn UI, Fiber, Fastify, Flutter</p>
             <p><span className="font-bold">[DATABASES]</span> MongoDB, PostgreSQL, Prisma ORM, Redis, Supabase, Firebase</p>

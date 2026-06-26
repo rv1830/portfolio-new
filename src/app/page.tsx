@@ -6,35 +6,69 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Terminal from "@/components/Terminal";
 import Header from "@/components/Header";
+import CONTACT_DATA from "@/data/contact.json";
 
 export const metadata: Metadata = {
-  title: "Ravi Raj | Software Engineer & Full-Stack Developer",
-  description: "Software Engineer & Full-Stack Developer with 1+ years of experience building robust backend and frontend systems end-to-end. Specializing in Next.js, Node.js, Go, Flutter, and WebSockets/WebRTC/gRPC.",
+  title: "Ravi Raj | Software Engineer, SDE & Founder - Octomate AI",
+  description: "Ravi Raj is a Full-Stack Software Engineer (SDE) and Founder of Octomate AI. Over 1+ years of experience building 10+ production-grade web systems. Specialized in high-performance backends (Go, Python/FastAPI,Nextjs, Node.js), Flutter/Dart Mobile Application,  WebSockets, WebRTC, DevOps (Docker, Kubernetes, Dokploy, Nginx), and database scaling (Postgres, Redis).",
   keywords: [
     "Ravi Raj",
-    "Software Engineer",
-    "Full-Stack Developer",
+    "Ravi Raj SDE",
+    "Ravi Raj Software Engineer",
+    "Ravi Raj Octomate AI",
+    "Ravi Raj Octomate AI Founder",
+    "Octomate AI Founder",
+    "Astrotalk Founder",
+    "Astrotalk Backend Engineer",
+    "Ravi Raj SDE Delhi",
+    "Hire Software Engineer",
+    "Hire Full Stack Developer",
+    "Hire Go Developer",
+    "Hire FastAPI Developer",
     "Go Developer",
-    "Flutter Developer",
-    "TypeScript Developer",
-    "Next.js Portfolio",
-    "3D Hacker Portfolio",
-    "Backend Engineer",
-    "FastAPI Developer"
+    "Next.js Developer",
+    "Python SDE",
+    "NodeJS Developer",
+    "Kubernetes DevOps",
+    "Docker SDE",
+    "WebSockets Engineer",
+    "WebRTC SDE",
+    "gRPC backend",
+    "Kafka engineer",
+    "RabbitMQ developer",
+    "n8n automation",
+    "Dokploy DevOps",
+    "SaaS architect Delhi",
+    "full stack engineer portfolio"
   ],
+  authors: [{ name: "Ravi Raj", url: "https://github.com/rv1830" }],
+  creator: "Ravi Raj",
+  publisher: "Ravi Raj",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
   openGraph: {
-    title: "Ravi Raj | Software Engineer & Full-Stack Developer Portfolio",
-    description: "Robust backend and frontend systems, secure cryptographic pipelines, and responsive mobile and web applications.",
+    title: "Ravi Raj | Software Engineer, SDE & Founder - Octomate AI",
+    description: "Full-Stack Software Engineer (SDE) and Founder of Octomate AI. Specialized in high-concurrency systems, secure cryptographic pipelines, and interactive web/mobile platforms.",
     type: "website",
     locale: "en_US",
     siteName: "Ravi Raj Portfolio"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ravi Raj | Software Engineer",
-    description: "Building robust systems end-to-end using Go, Node, Python, Flutter, and Next.js."
+    title: "Ravi Raj | Software Engineer & SDE",
+    description: "Building robust systems end-to-end using Go, Node, Python, Next.js, and Kubernetes."
   }
 };
+
 
 export default function Home() {
   return (
@@ -137,13 +171,13 @@ export default function Home() {
             © {new Date().getFullYear()} RAVI_RAJ. SECURE PORTFOLIO LOG. ALL RIGHTS RESERVED.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
-            <a href="mailto:raviraj.bvcoe@gmail.com" className="hover:text-cyber-green transition-colors">EMAIL</a>
+            <a href={`mailto:${CONTACT_DATA.email}`} className="hover:text-cyber-green transition-colors">EMAIL</a>
             <span>/</span>
-            <a href="https://www.linkedin.com/in/ravi-raj-596135216/" target="_blank" rel="noreferrer" className="hover:text-cyber-green transition-colors">LINKEDIN</a>
+            <a href={CONTACT_DATA.linkedin} target="_blank" rel="noreferrer" className="hover:text-cyber-green transition-colors">LINKEDIN</a>
             <span>/</span>
-            <a href="https://github.com/rv1830" target="_blank" rel="noreferrer" className="hover:text-cyber-green transition-colors">GITHUB</a>
+            <a href={CONTACT_DATA.github} target="_blank" rel="noreferrer" className="hover:text-cyber-green transition-colors">GITHUB</a>
             <span>/</span>
-            <a href="tel:+919693877411" className="hover:text-cyber-green transition-colors">PHONE: +91 9693877411</a>
+            <a href={`tel:${CONTACT_DATA.phone.replace(/\s+/g, '')}`} className="hover:text-cyber-green transition-colors">PHONE: {CONTACT_DATA.phone}</a>
           </div>
         </div>
         <p className="text-[10px] text-cyber-green/20 max-w-xl mx-auto">

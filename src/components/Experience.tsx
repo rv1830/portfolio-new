@@ -4,6 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Server, Calendar, MapPin, Terminal as TerminalIcon } from "lucide-react";
 
+import JOBS_DATA from "@/data/experience.json";
+
 interface JobLog {
   company: string;
   role: string;
@@ -14,60 +16,8 @@ interface JobLog {
   systemMetrics: { label: string; value: string }[];
 }
 
-const JOBS: JobLog[] = [
-  {
-    company: "FREELANCE CONTRACTS",
-    role: "Freelance Full-Stack & DevOps Engineer",
-    location: "Remote",
-    period: "Feb 2026 - Present",
-    systemCode: "SYS_FREELANCE_CORE",
-    systemMetrics: [
-      { label: "SHIPPED PRODUCTS", value: "10+ Production Apps" },
-      { label: "QUALITY RATINGS", value: "100% Lighthouse Ready" },
-      { label: "INTEGRATION SUITE", value: "End-to-End Testing" }
-    ],
-    bullets: [
-      "Delivering high-concurrency backend services (Go Fiber, FastAPI) and responsive frontends (React, Flutter) directly to clients.",
-      "Developing interactive web experiences containing 3D visualizers, WebGL shader models, and GSAP timeline animations (Noir Cafe).",
-      "Owning full devops workflows, writing test suites, Dockerizing microservices, and establishing robust Nginx and AWS deployment setups."
-    ]
-  },
-  {
-    company: "PRODIGAL AI",
-    role: "Software Developer",
-    location: "Delhi, India",
-    period: "Sept 2025 - Feb 2026",
-    systemCode: "SYS_DEPLOY_PROD_01",
-    systemMetrics: [
-      { label: "APPS SCALED", value: "4+ Production-grade" },
-      { label: "PEAK LOAD", value: "100K+ Active Users" },
-      { label: "AUTH METHOD", value: "JWT/OAuth 2.0 Multi-tenant" }
-    ],
-    bullets: [
-      "Led end-to-end backend architecture scaling 4+ production systems: Astro, Linkup Capital, Dhanur Collab, and Xorigg.",
-      "Designed and optimized high-concurrency microservices in FastAPI and Express.js with sub-50ms query operations via Redis.",
-      "Engineered advanced voice orchestration pipelines featuring automated Speech-to-Text (STT) and Text-to-Speech (TTS) integrations.",
-      "Owned full infrastructure lifecycle: containerization using Docker, Nginx reverse proxy load balancers, and DigitalOcean/AWS S3 hosting."
-    ]
-  },
-  {
-    company: "TIMES NETWORK",
-    role: "Frontend Developer Intern",
-    location: "Noida, India",
-    period: "Mar 2025 - Aug 2025",
-    systemCode: "SYS_REFACTOR_NEWS_02",
-    systemMetrics: [
-      { label: "SYSTEM USERBASE", value: "3,000+ Editors" },
-      { label: "AUTOMATION EFFORT", value: "~90% Reduction" },
-      { label: "PLATFORM ARCH", value: "Nx Monorepo Micro-FE" }
-    ],
-    bullets: [
-      "Built 'SocioPulse', a micro-frontend platform (Nx Monorepo) serving 3,000+ internal editors, enabling AI-powered workflows.",
-      "Optimized Vault Explorer using lazy loading, custom caching headers, and bundle-splitting, drastically reducing FCP.",
-      "Re-engineered legacy Vanilla JS 'NewsRadar' dashboard into a Next.js configuration-driven architecture, reducing project setup by 90%."
-    ]
-  }
-];
+const JOBS: JobLog[] = JOBS_DATA;
+
 
 export default function Experience() {
   return (

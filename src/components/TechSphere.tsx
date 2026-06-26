@@ -2,67 +2,11 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+import SKILLS_DATA from "@/data/skills.json";
+
 // Complete Tech stack data
-const SKILLS = [
-  // Languages
-  { name: "Java", category: "language" },
-  { name: "Python", category: "language" },
-  { name: "JavaScript", category: "language" },
-  { name: "TypeScript", category: "language" },
-  { name: "Go", category: "language" },
-  { name: "Dart", category: "language" },
-  { name: "SQL", category: "language" },
-  { name: "HTML", category: "language" },
-  { name: "CSS", category: "language" },
+const SKILLS = SKILLS_DATA;
 
-  // Frameworks & Libraries
-  { name: "Next.js", category: "framework" },
-  { name: "React.js", category: "framework" },
-  { name: "Express.js", category: "backend" },
-  { name: "FastAPI", category: "backend" },
-  { name: "NestJS", category: "backend" },
-  { name: "Redux", category: "framework" },
-  { name: "Tailwind CSS", category: "framework" },
-  { name: "Bootstrap", category: "framework" },
-  { name: "Material UI", category: "framework" },
-  { name: "Shadcn UI", category: "framework" },
-  { name: "Flutter", category: "frontend" },
-  { name: "Fiber", category: "backend" },
-  { name: "Fastify", category: "backend" },
-
-  // Databases & ORMs
-  { name: "MongoDB", category: "database" },
-  { name: "PostgreSQL", category: "database" },
-  { name: "Prisma ORM", category: "database" },
-  { name: "Redis", category: "database" },
-  { name: "Supabase", category: "database" },
-  { name: "Firebase", category: "database" },
-  { name: "Pinata IPFS", category: "database" },
-
-  // DevOps & Tools
-  { name: "Git", category: "devops" },
-  { name: "GitHub", category: "devops" },
-  { name: "Docker", category: "devops" },
-  { name: "Kubernetes", category: "devops" },
-  { name: "Nginx", category: "devops" },
-  { name: "Apache", category: "devops" },
-  { name: "CI/CD", category: "devops" },
-  { name: "AWS (S3)", category: "devops" },
-  { name: "Ngrok", category: "devops" },
-  { name: "Nx Monorepo", category: "devops" },
-  { name: "Dokploy", category: "devops" },
-  { name: "n8n", category: "devops" },
-  { name: "Google Analytics 4", category: "devops" },
-
-  // Technologies & Integrations
-  { name: "RESTful APIs", category: "backend" },
-  { name: "WebSockets (Socket.io)", category: "backend" },
-  { name: "STT/TTS Systems", category: "backend" },
-  { name: "Apache Kafka", category: "backend" },
-  { name: "RabbitMQ", category: "backend" },
-  { name: "WebRTC", category: "backend" },
-  { name: "gRPC", category: "backend" }
-];
 
 interface Node {
   x: number;
