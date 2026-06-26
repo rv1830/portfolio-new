@@ -71,10 +71,74 @@ export const metadata: Metadata = {
 
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ravi Raj",
+    "url": "https://raviraj-two.vercel.app/",
+    "jobTitle": "Full-Stack Software Engineer & SDE",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "GURU GOBIND SINGH INDRAPRASTHA UNIVERSITY (GGSIPU), Delhi"
+    },
+    "knowsAbout": [
+      "Software Engineering",
+      "Backend Development",
+      "Full-Stack Development",
+      "GoLang",
+      "Fiber",
+      "FastAPI",
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "WebSockets",
+      "WebRTC",
+      "gRPC",
+      "Express.js",
+      "Fastify",
+      "Docker",
+      "Kubernetes",
+      "n8n",
+      "Apache Kafka",
+      "RabbitMQ",
+      "Dokploy"
+    ],
+    "sameAs": [
+      "https://github.com/rv1830",
+      "https://www.linkedin.com/in/ravi-raj-596135216/",
+      "https://x.com/RaviRaj_sde"
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Octomate AI",
+        "jobTitle": "Founder & Lead Architect"
+      },
+      {
+        "@type": "Organization",
+        "name": "Prodigal AI",
+        "jobTitle": "Software Developer"
+      },
+      {
+        "@type": "Organization",
+        "name": "Times Network / Times Of India",
+        "jobTitle": "Frontend Developer Intern"
+      }
+    ],
+    "description": "Ravi Raj is a Full-Stack Software Engineer (SDE) and Founder of Octomate AI. Expert SDE specializing in building scalable backend systems, voice orchestrators (Astroservice), SaaS applications, and DevOps deployment pipelines."
+  };
+
   return (
     <main className="min-h-screen bg-black text-cyber-green flex flex-col font-mono relative overflow-hidden">
+      {/* JSON-LD Structured Data Schema for Next-Level Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* 3D background elements */}
       <MatrixRain />
+
       
       {/* Retro CRT monitor flicker and scanline overlays */}
       <div className="crt-overlay" />
