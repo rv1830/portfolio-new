@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Premium Cyberpunk Hacker Portfolio
 
-## Getting Started
+A premium, interactive cyberpunk/hacker-themed developer portfolio built with Next.js 16 (App Router), Tailwind CSS v4, HTML5 Canvas, and Framer Motion. 
 
-First, run the development server:
+## ⚡ Features
+- **Binary Matrix Rain:** High-performance 60fps canvas-based falling code background.
+- **Interactive Shell Terminal:** Fully functional terminal emulator executing custom commands (`help`, `about`, `skills`, `projects`, `cat resume`, and `sudo hack` bypasses).
+- **Constellation Tech Network:** 2D interactive node net representing a 50+ technology stack with mouse attraction physics and HUD details.
+- **Audit Logs Timeline:** Systems diagnostic log layout showcasing professional work experience history.
 
+## 🚀 Getting Started
+
+First, install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the portfolio live.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License & Credits
+If you are using this portfolio template for your own site, please support my work and credit me by:
+- Tagging me on X/Twitter: [@RaviRaj_sde](https://x.com/RaviRaj_sde)
+- Linking back to my GitHub: [github.com/rv1830](https://github.com/rv1830)

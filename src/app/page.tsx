@@ -1,65 +1,155 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import MatrixRain from "@/components/MatrixRain";
+import Hero from "@/components/Hero";
+import TechSphere from "@/components/TechSphere";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Terminal from "@/components/Terminal";
+import Header from "@/components/Header";
+
+export const metadata: Metadata = {
+  title: "Ravi Raj | Software Engineer & Full-Stack Developer",
+  description: "Software Engineer & Full-Stack Developer with 1+ years of experience building robust backend and frontend systems end-to-end. Specializing in Next.js, Node.js, Go, Flutter, and WebSockets/WebRTC/gRPC.",
+  keywords: [
+    "Ravi Raj",
+    "Software Engineer",
+    "Full-Stack Developer",
+    "Go Developer",
+    "Flutter Developer",
+    "TypeScript Developer",
+    "Next.js Portfolio",
+    "3D Hacker Portfolio",
+    "Backend Engineer",
+    "FastAPI Developer"
+  ],
+  openGraph: {
+    title: "Ravi Raj | Software Engineer & Full-Stack Developer Portfolio",
+    description: "Robust backend and frontend systems, secure cryptographic pipelines, and responsive mobile and web applications.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Ravi Raj Portfolio"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ravi Raj | Software Engineer",
+    description: "Building robust systems end-to-end using Go, Node, Python, Flutter, and Next.js."
+  }
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-black text-cyber-green flex flex-col font-mono relative overflow-hidden">
+      {/* 3D background elements */}
+      <MatrixRain />
+      
+      {/* Retro CRT monitor flicker and scanline overlays */}
+      <div className="crt-overlay" />
+      <div className="absolute inset-0 bg-black/40 z-[-1] pointer-events-none" />
+
+      {/* Dynamic client-side Navigation Header Bar with IP tracking alert */}
+      <Header />
+
+      {/* Landing Section */}
+      <Hero />
+
+      {/* Skills Section with 3D Cloud */}
+      <section id="skills" className="py-20 px-4 max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative select-none">
+        <div className="absolute top-0 right-10 w-[200px] h-[200px] bg-cyber-green/5 rounded-full blur-[80px] pointer-events-none z-0"></div>
+        
+        {/* Left Side: Skills classifications */}
+        <div className="lg:col-span-5 space-y-6 z-10">
+          <div className="space-y-2">
+            <div className="flex items-center space-x-2 text-cyber-green text-xs">
+              <span className="inline-block w-1.5 h-1.5 bg-cyber-green"></span>
+              <span>INDEXING_KNOWLEDGE_SPHERE</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-mono font-bold tracking-wider text-white">
+              TECH STACK
+            </h2>
+            <div className="h-[1px] w-full bg-gradient-to-r from-cyber-green/50 to-transparent"></div>
+          </div>
+          
+          <p className="text-xs md:text-sm text-cyber-green/70 leading-relaxed font-mono">
+            Ravi's full-stack, mobile, and backend capabilities compiled as a real-time interactive node constellation map. Drag to interact, hover to track network nodes.
+          </p>
+
+          <div className="space-y-4 pt-2 text-xs">
+            <div className="border border-zinc-800 bg-zinc-950/60 p-4 rounded hover:border-cyber-green/20 transition-all duration-300">
+              <h3 className="font-bold text-white mb-2 flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+                <span>LANGUAGES, CORE & MESSAGING</span>
+              </h3>
+              <p className="text-zinc-400">Java, Python, JavaScript, TypeScript, Go, Dart, SQL, HTML, CSS, Apache Kafka, RabbitMQ, WebSockets (Socket.io), WebRTC, gRPC</p>
+            </div>
+            
+            <div className="border border-zinc-800 bg-zinc-950/60 p-4 rounded hover:border-cyber-green/20 transition-all duration-300">
+              <h3 className="font-bold text-white mb-2 flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 bg-cyber-green rounded-full"></span>
+                <span>FRAMEWORKS, LIBRARIES & DATABASES</span>
+              </h3>
+              <p className="text-zinc-400">Next.js, React.js, Express.js, FastAPI, NestJS, Redux, Tailwind CSS, Bootstrap, Material UI, Shadcn UI, Fiber, Fastify, Flutter (Mobile), MongoDB, PostgreSQL, Redis, Prisma ORM, Supabase, Firebase</p>
+            </div>
+
+            <div className="border border-zinc-800 bg-zinc-950/60 p-4 rounded hover:border-cyber-green/20 transition-all duration-300">
+              <h3 className="font-bold text-white mb-2 flex items-center space-x-2">
+                <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                <span>DEVOPS, AUTOMATION & TOOLS</span>
+              </h3>
+              <p className="text-zinc-400">Git, GitHub, Docker, Kubernetes, Nginx, Apache, CI/CD, AWS (S3), Ngrok, Nx Monorepo, Dokploy, n8n, Pinata IPFS, Google Analytics 4</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side: 3D rotating Tag Cloud */}
+        <div className="lg:col-span-7 flex justify-center items-center relative z-10 w-full">
+          <TechSphere />
+        </div>
+      </section>
+
+      {/* Experience Timeline */}
+      <Experience />
+
+      {/* Projects Cards */}
+      <Projects />
+
+      {/* Terminal Hacking Environment */}
+      <section id="terminal" className="py-20 px-4 max-w-5xl mx-auto w-full space-y-8 z-10">
+        <div className="space-y-2 text-center">
+          <div className="flex items-center justify-center space-x-2 text-cyber-green text-xs font-mono">
+            <span className="inline-block w-2.5 h-0.5 bg-cyber-green animate-pulse"></span>
+            <span>CYBER_SSH_TERMINAL_ONLINE</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-mono font-bold tracking-wider text-white">
+            INTERACTIVE SHELL
+          </h2>
+          <p className="text-xs md:text-sm text-cyber-green/60 max-w-md mx-auto">
+            Access secure database endpoints or bypass system firewalls using our interactive mock bash shell environment.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <Terminal />
+      </section>
+
+      {/* Interactive Footer */}
+      <footer className="mt-auto border-t border-cyber-green/20 bg-zinc-950/80 px-6 py-8 text-center text-xs text-cyber-green/40 select-none space-y-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto gap-4">
+          <p className="font-mono">
+            © {new Date().getFullYear()} RAVI_RAJ. SECURE PORTFOLIO LOG. ALL RIGHTS RESERVED.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <a href="mailto:raviraj.bvcoe@gmail.com" className="hover:text-cyber-green transition-colors">EMAIL</a>
+            <span>/</span>
+            <a href="https://www.linkedin.com/in/ravi-raj-596135216/" target="_blank" rel="noreferrer" className="hover:text-cyber-green transition-colors">LINKEDIN</a>
+            <span>/</span>
+            <a href="https://github.com/rv1830" target="_blank" rel="noreferrer" className="hover:text-cyber-green transition-colors">GITHUB</a>
+            <span>/</span>
+            <a href="tel:+919693877411" className="hover:text-cyber-green transition-colors">PHONE: +91 9693877411</a>
+          </div>
         </div>
-      </main>
-    </div>
+        <p className="text-[10px] text-cyber-green/20 max-w-xl mx-auto">
+          DISCLAIMER: This system contains mock penetration testing vectors. Security bypass instructions (sudo hack) are simulated. No actual firewalls or protocols were compromised.
+        </p>
+      </footer>
+    </main>
   );
 }
