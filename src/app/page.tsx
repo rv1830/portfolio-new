@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Ravi Raj", url: "https://github.com/rv1830" }],
   creator: "Ravi Raj",
   publisher: "Ravi Raj",
+  verification: {
+    google: "oYL17s2KIwBFGyJY99B1hj49YrxhlmCF8-lZOJAaOkg"
+  },
   robots: {
     index: true,
     follow: true,
@@ -55,6 +58,7 @@ export const metadata: Metadata = {
       "max-snippet": -1
     }
   },
+
   openGraph: {
     title: "Ravi Raj | Software Engineer, SDE & Founder - Octomate AI",
     description: "Full-Stack Software Engineer (SDE) and Founder of Octomate AI. Specialized in high-concurrency systems, secure cryptographic pipelines, and interactive web/mobile platforms.",
