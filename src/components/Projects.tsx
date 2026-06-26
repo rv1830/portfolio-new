@@ -43,8 +43,7 @@ export default function Projects() {
         {/* Astroservice - Featured Full Width */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="cyber-card flex flex-col justify-between p-6 md:p-8 rounded-lg relative overflow-hidden bg-black/80 border-cyber-green shadow-[0_0_25px_rgba(0,255,102,0.15)]"
         >
@@ -54,7 +53,7 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
               <div className="flex items-center space-x-2.5">
                 <Award className="w-6 h-6 text-cyber-green animate-pulse" />
-                <h3 className="text-xl md:text-3xl font-mono font-extrabold text-white tracking-wide">
+                <h3 className="text-xl md:text-3xl font-mono font-extrabold text-white tracking-wide break-words">
                   {MAIN_PROJECTS[0].title}
                 </h3>
               </div>
@@ -99,7 +98,7 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <div className="flex justify-between items-center pt-2">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-2">
               <span className="text-[10px] font-mono text-zinc-500 flex items-center space-x-1">
                 <Cpu className="w-3.5 h-3.5 text-cyber-green" />
                 <span>CHALLENGING_DEVOPS_CORE_01</span>
@@ -108,7 +107,7 @@ export default function Projects() {
                 href={MAIN_PROJECTS[0].link}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center space-x-1.5 border border-cyber-green px-4 py-2 rounded text-xs font-mono tracking-widest bg-cyber-green/10 text-cyber-green hover:bg-cyber-green hover:text-black hover:shadow-[0_0_15px_rgba(0,255,102,0.4)] transition-all duration-300 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center space-x-1.5 border border-cyber-green px-4 py-2 rounded text-xs font-mono tracking-widest bg-cyber-green/10 text-cyber-green hover:bg-cyber-green hover:text-black hover:shadow-[0_0_15px_rgba(0,255,102,0.4)] transition-all duration-300 cursor-pointer text-center"
               >
                 <span>DECRYPT_PIPELINES</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -123,8 +122,7 @@ export default function Projects() {
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.2 }}
               className={`cyber-card flex flex-col justify-between p-6 rounded-lg relative overflow-hidden bg-black/80 ${
                 project.color === "blue" 
@@ -144,7 +142,7 @@ export default function Projects() {
                     }`}>
                       {project.role}
                     </span>
-                    <h3 className="text-lg md:text-xl font-mono font-extrabold text-white tracking-wide mt-1">
+                    <h3 className="text-lg md:text-xl font-mono font-extrabold text-white tracking-wide mt-1 break-words">
                       {project.title}
                     </h3>
                   </div>
@@ -191,7 +189,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between items-center pt-2">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-2">
                   <span className="text-[10px] font-mono text-zinc-600 flex items-center space-x-1">
                     <Database className="w-3 h-3" />
                     <span>DATA_SECTOR_{idx + 2}</span>
@@ -200,7 +198,7 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
-                    className={`inline-flex items-center space-x-1.5 border px-3 py-1.5 rounded text-xs font-mono tracking-widest transition-all duration-300 cursor-pointer ${
+                    className={`w-full sm:w-auto inline-flex items-center justify-center space-x-1.5 border px-3 py-1.5 rounded text-xs font-mono tracking-widest transition-all duration-300 cursor-pointer text-center ${
                       project.color === "blue"
                         ? "border-blue-500/40 text-blue-400 hover:bg-blue-500 hover:text-black hover:shadow-[0_0_10px_rgba(56,189,248,0.4)]"
                         : "border-cyber-green/40 text-cyber-green hover:bg-cyber-green hover:text-black hover:shadow-[0_0_10px_rgba(0,255,102,0.4)]"

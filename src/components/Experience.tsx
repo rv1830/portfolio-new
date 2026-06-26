@@ -43,8 +43,7 @@ export default function Experience() {
           <motion.div
             key={job.company}
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             className="relative space-y-4"
           >
